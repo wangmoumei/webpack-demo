@@ -1,0 +1,17 @@
+.content{
+  background: url(./img/desktop.jpg)
+}
+.content::before{
+  display: block;
+  content: "这里是less"
+}
+.flex{
+  display: flex;
+  color: #fff;
+  &>div:nth-of-type(2){
+    background: red;
+    color: #fff;
+    text-align: center;
+    flex: 1
+  }
+}
