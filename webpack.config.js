@@ -29,6 +29,7 @@ module.exports = {
         }
       },
       {
+        //处理图片文件的url
         test: /\.(png|jpg|gif)$/,
         use: [
           // {
@@ -43,6 +44,18 @@ module.exports = {
               limit:1024,
               //指定打包目录和图片命名规则
               name:"img/[hash:8].[name].[ext]"
+            }
+          }
+        ]
+      },
+      {
+        //处理字体文件的url
+        test: /\.(woff|woff2|svg|eot|ttf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name:"font/[hash:8].[name].[ext]"
             }
           }
         ]
